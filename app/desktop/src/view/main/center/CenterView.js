@@ -37,12 +37,10 @@ Ext.define('HelloWorld.view.main.center.CenterView', {
 					handler : function(){
 					console.log('User Form Submitted!!');
 					Ext.Ajax.request({
-						url:'http://localhost:3000/posts',
+						url:'http://localhost:3000/posts/2',
+
 						method:'DELETE',
-						//jsonData :{
-						//	name:'Tamilmaran',
-						//	id : 5
-						//},
+
 						success: function(response)
 						{
 							Ext.Msg.alert("Success");
@@ -51,6 +49,21 @@ Ext.define('HelloWorld.view.main.center.CenterView', {
 						{
 							Ext.Msg.alert("Failed");
 						}
+
+						//method:'Update',
+						//jsonData :{
+						//	name:'Tamilmaran',
+						//	id : 5
+						//},
+						// success: function(response)
+						// {
+						// 	Ext.Msg.alert("Success");
+						// },
+						// failure: function(response)
+						// {
+						// 	Ext.Msg.alert("Failed");
+						// }
+						
 					})}
 				}
 
