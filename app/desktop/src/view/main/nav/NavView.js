@@ -1,3 +1,30 @@
+const masterPanel = Ext.create('Ext.panel.Panel', 
+{
+    renderTo: Ext.getBody(),
+    width : 400,
+    height : 200,
+    layout:'auto',
+    items:[{
+        xtype:'panel',
+        title:'Child Panel 1',
+        height:100,
+        columWidth:0.5
+    },{
+        xtype:'panel',
+        title:'Child Panel 2',
+        height:100,
+        columWidth:0.5
+
+    }
+
+    ]
+});
+
+
+
+
+
+
 Ext.define('HelloWorld.view.main.nav.NavView', {
     extend: 'Ext.Panel',
     xtype: 'navview',
